@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Container, Typography, Stack } from "@mui/material";
-import AboutBg from "../../public/Saved Pictures/About.JPG"; 
+// import AboutBg from "../../public/Saved Pictures/About.JPG"; 
 
 const About = () => {
   return (
@@ -8,7 +8,7 @@ const About = () => {
       sx={{
         width: "100%",
         minHeight: "87.5vh",
-        backgroundImage: `url(${AboutBg})`,
+        // backgroundImage: `url(${AboutBg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         position: "relative",

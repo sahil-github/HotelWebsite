@@ -108,8 +108,8 @@ export default function Navbar(props) {
       <AppBar
         position="fixed"
         sx={{
-          backgroundColor: "#222", 
-          backgroundColor: "transparent",
+          backgroundColor: "#000", 
+          // backgroundColor: "transparent",
           backdropFilter: "blur(12px)",
           boxShadow: "#000",
         }}
