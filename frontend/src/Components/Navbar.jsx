@@ -21,7 +21,6 @@ import { styled, alpha } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import LOGO from "../assets/GULMOHARLOGO.png";
-import Filter from "./Filter";
 import AccountCircleSharpIcon from "@mui/icons-material/AccountCircleSharp";
 const drawerWidth = 240;
 
@@ -161,7 +160,7 @@ export default function Navbar(props) {
                 }}
               />
 
-              <Filter onApplyFilters={setFilters} sx={{ color: "#fff" }} />
+             
 
               <SearchIconWrapper>
                 <SearchIcon />
