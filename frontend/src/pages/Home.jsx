@@ -6,6 +6,7 @@ import { Link as RouterLink } from "react-router-dom";
 import About from "./About";
 import Contact from "./Contact";
 import Amenities from "./Amenities";
+import Rooms from "./Rooms";
 
 const Home = () => {
   return (
@@ -82,7 +83,9 @@ const Home = () => {
         </Box>
       </Box>
       <About />
+       <Rooms/>
       <Amenities/>
+      
       <Contact />
 
     </>
