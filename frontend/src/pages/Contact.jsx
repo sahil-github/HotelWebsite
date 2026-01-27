@@ -40,7 +40,6 @@ const Contact = () => {
     <Box sx={{
         width: "100%",
          minHeight: "100vh",
-        py: { xs: 6, md: 10 },
         backgroundColor: "#fff",
         px: { xs: 2, md: 12  }, py: 1 ,
       }}>
