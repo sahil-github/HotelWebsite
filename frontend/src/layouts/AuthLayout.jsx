@@ -1,31 +1,32 @@
 import { Box } from "@mui/material";
 import { Outlet } from "react-router-dom";
-import Footer from "../components/Footer";
+import Footer from "../Components/Footer";
 import InputBG from "../assets/login.png";
 
 const AuthLayout = () => {
   return (
     <Box
       sx={{
-        minHeight: "100vh",
+        height: "100vh",
         display: "flex",
         flexDirection: "column",
+        overflow: "hidden",
       }}
     >
       <Box
         sx={{
           flex: 1,
-          backgroundImage: ` url(${InputBG})`,
+          backgroundImage: `url(${InputBG})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           display: "flex",
-          alignItems: "center", 
+          alignItems: "center",
           justifyContent: "center",
-          px: 2,
         }}
       >
         <Outlet />
       </Box>
+
       <Footer />
     </Box>
   );

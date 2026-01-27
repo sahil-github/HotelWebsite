@@ -13,9 +13,11 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { Link as RouterLink } from "react-router-dom";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 import ForgotPassword from "../Components/ForgotPassword";
 
-const Card = styled(MuiCard)(({ theme }) => ({
+const Card = styled(MuiCard)(() => ({
   width: "100%",
   maxWidth: 420,
   padding: "32px 28px",
@@ -23,10 +25,8 @@ const Card = styled(MuiCard)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   gap: 14,
-
   backdropFilter: "blur(20px)",
   WebkitBackdropFilter: "blur(20px)",
-
   boxShadow: "0 20px 50px rgba(0,0,0,0.35)",
   border: "1px solid #000",
 }));
@@ -36,79 +36,53 @@ const textFieldStyles = {
     borderRadius: 12,
     backgroundColor: "transparent",
     border: "1px solid #000",
-
-    "& fieldset": {
-      borderColor: "rgba(0,0,0,0.25)",
-    },
-    "&:hover fieldset": {
-      borderColor: "#000",
-    },
+    "& fieldset": { borderColor: "rgba(0,0,0,0.25)" },
+    "&:hover fieldset": { borderColor: "#000" },
     "&.Mui-focused fieldset": {
       borderColor: "#000",
       borderWidth: 2,
     },
   },
-
   "& input": {
     padding: "14px",
     fontSize: 15,
   },
-
   "& .MuiFormHelperText-root": {
     color: "#d32f2f",
   },
 };
 
-export default function SignIn() {
-  const [form, setForm] = React.useState({
-    email: "",
-    password: "",
-    remember: false,
-  });
+// ✅ Yup Validation Schema
+const validationSchema = Yup.object({
+  email: Yup.string()
+    .email("Enter a valid email address")
+    .required("Email is required"),
+  password: Yup.string()
+    .min(6, "Minimum 6 characters required")
+    .required("Password is required"),
+});
 
-  const [errors, setErrors] = React.useState({});
+export default function SignIn() {
   const [open, setOpen] = React.useState(false);
 
-  const handleChange = (e) => {
-    const { name, value, checked, type } = e.target;
-    setForm((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-    setErrors({});
-  };
-
-  const validate = () => {
-    const newErrors = {};
-    if (!/\S+@\S+\.\S+/.test(form.email)) {
-      newErrors.email = "Enter a valid email address";
-    }
-    if (form.password.length < 6) {
-      newErrors.password = "Minimum 6 characters required";
-    }
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!validate()) return;
-
-    console.log("Login Data:", form);
-  
-  };
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+      remember: false,
+    },
+    validationSchema,
+    onSubmit: (values) => {
+      console.log("Login Data:", values);
+    },
+  });
 
   return (
     <>
-      <CssBaseline />
-
-      <Card>
-        <Typography
-          variant="h4"
-          fontWeight={700}
-          textAlign="center"
-          letterSpacing={1}
-        >
+    <Box sx={{ minHeight: "100vh", display: "flex", justifyContent: "center", alignItems: "center", py: 6 }}>
+       <CssBaseline />
+          <Card>
+        <Typography variant="h4" fontWeight={700} textAlign="center">
           Sign In
         </Typography>
 
@@ -116,15 +90,16 @@ export default function SignIn() {
           Welcome back to <strong>Gulmohar Grand</strong>
         </Typography>
 
-        <Box component="form" onSubmit={handleSubmit} mt={1}>
+        <Box component="form" onSubmit={formik.handleSubmit} mt={1}>
           <FormControl fullWidth margin="normal">
             <TextField
               name="email"
-              value={form.email}
-              onChange={handleChange}
               placeholder="Email address"
-              error={!!errors.email}
-              helperText={errors.email}
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              error={formik.touched.email && Boolean(formik.errors.email)}
+              helperText={formik.touched.email && formik.errors.email}
               sx={textFieldStyles}
             />
           </FormControl>
@@ -133,11 +108,12 @@ export default function SignIn() {
             <TextField
               name="password"
               type="password"
-              value={form.password}
-              onChange={handleChange}
               placeholder="Password"
-              error={!!errors.password}
-              helperText={errors.password}
+              value={formik.values.password}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              error={formik.touched.password && Boolean(formik.errors.password)}
+              helperText={formik.touched.password && formik.errors.password}
               sx={textFieldStyles}
             />
           </FormControl>
@@ -146,8 +122,8 @@ export default function SignIn() {
             control={
               <Checkbox
                 name="remember"
-                checked={form.remember}
-                onChange={handleChange}
+                checked={formik.values.remember}
+                onChange={formik.handleChange}
               />
             }
             label="Remember me"
@@ -163,7 +139,6 @@ export default function SignIn() {
               fontWeight: 700,
               fontSize: 16,
               textTransform: "none",
-
               background: "linear-gradient(135deg, #7fffd4, #d5d95a)",
               color: "#000",
               "&:hover": {
@@ -193,11 +168,15 @@ export default function SignIn() {
 
         <Typography textAlign="center" fontSize={14}>
           Don&apos;t have an account?{" "}
-          <Link component={RouterLink} to="/signup" underline="hover">
+          <Link component={RouterLink} to="/signup" underline_attach="hover">
             Sign Up
           </Link>
         </Typography>
       </Card>
+    </Box>
+     
+
+  
     </>
   );
 }

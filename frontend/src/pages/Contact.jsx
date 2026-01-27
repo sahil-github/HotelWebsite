@@ -37,8 +37,14 @@ const Contact = () => {
   }, []);
 
   return (
-    <Box>
-      <Typography variant="h4" fontWeight={700} ml={2} mt={2}>
+    <Box sx={{
+        width: "100%",
+         minHeight: "100vh",
+        py: { xs: 6, md: 10 },
+        backgroundColor: "#fff",
+        px: { xs: 2, md: 12  }, py: 1 ,
+      }}>
+      <Typography variant="h4" fontWeight={700} ml={2} mt={2} align="center">
         MESSAGE US!
       </Typography>
 

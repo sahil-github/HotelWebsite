@@ -1,29 +1,31 @@
 import React from "react";
-import { Box, Container, Typography, Stack, Divider } from "@mui/material";
+import { Box,  Typography, Stack, Divider } from "@mui/material";
 
 const About = () => {
   return (
     <Box
       sx={{
         width: "100%",
-        py: { xs: 6, md: 10 },
+         minHeight: "100vh",
+        py:1,
         backgroundColor: "#fff",
+         px: { xs: 2, md: 12  }
       }}
     >
-      <Container>
-        {/* Heading (same vibe as Contact) */}
+  
         <Typography
           variant="h4"
           fontWeight={700}
-          mb={1}
+          ml={2} mt={2}
+          align="center"
         >
-          ABOUT GULMOHAR GRAND
+          ABOUT US
         </Typography>
 
         <Divider sx={{ mb: 4 }} />
 
         {/* Content */}
-        <Stack spacing={3} maxWidth="800px">
+        <Stack spacing={3} maxWidth="800px" >
           <Typography
             variant="body1"
             sx={{
@@ -51,7 +53,6 @@ const About = () => {
             personalized care, and a welcoming atmosphere.
           </Typography>
         </Stack>
-      </Container>
     </Box>
   );
 };

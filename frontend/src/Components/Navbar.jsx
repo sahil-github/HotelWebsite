@@ -19,14 +19,17 @@ import {
 
 import { styled, alpha } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
-import SearchIcon from "@mui/icons-material/Search";
+// import SearchIcon from "@mui/icons-material/Search";
 import LOGO from "../assets/GULMOHARLOGO.png";
-import AccountCircleSharpIcon from "@mui/icons-material/AccountCircleSharp";
+// import AccountCircleSharpIcon from "@mui/icons-material/AccountCircleSharp";
 const drawerWidth = 240;
 
 const navItems = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
+  { label: "Amenities", path: "/amenities" },
+  { label: "Rooms", path: "/rooms" },
+  { label: "Gallery", path: "/gallery" },
   { label: "Contact", path: "/contact" },
 ];
 
@@ -77,7 +80,7 @@ export default function Navbar(props) {
     <Box
       onClick={handleDrawerToggle}
       sx={{
-        backgroundColor: "#0F0F0F",
+        backgroundColor: "#1E1E1E",
         height: "100%",
         color: "#fff",
       }}
@@ -107,7 +110,7 @@ export default function Navbar(props) {
       <AppBar
         position="fixed"
         sx={{
-          backgroundColor: "#000", 
+          backgroundColor: "#1E1E1E",
           // backgroundColor: "transparent",
           backdropFilter: "blur(12px)",
           boxShadow: "#000",
@@ -148,7 +151,7 @@ export default function Navbar(props) {
               justifyContent: "center",
             }}
           >
-            <Search>
+            {/* <Search>
               <StyledInputBase
                 placeholder="Search rooms, services..."
                 value={search}
@@ -165,7 +168,7 @@ export default function Navbar(props) {
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>
-            </Search>
+            </Search> */}
           </Box>
 
           <Box
@@ -193,7 +196,7 @@ export default function Navbar(props) {
                 {item.label}
               </Button>
             ))}
-            <AccountCircleSharpIcon style={{ fontSize: 40, color: "#555" }} />
+            {/* <AccountCircleSharpIcon style={{ fontSize: 40, color: "#555" }} /> */}
           </Box>
         </Toolbar>
       </AppBar>
@@ -208,7 +211,7 @@ export default function Navbar(props) {
           display: { xs: "block", sm: "none" },
           "& .MuiDrawer-paper": {
             width: drawerWidth,
-            backgroundColor: "#0F0F0F",
+            backgroundColor: "#1E1E1E",
             color: "#fff",
           },
         }}
