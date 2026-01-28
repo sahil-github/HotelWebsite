@@ -28,8 +28,7 @@ const Booking = () => {
       size: "35 sqm",
       capacity: "2 Adults",
       price: "₹3,500",
-      image:
-        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
       amenities: [
         "King / Twin Bed",
         "City View",
@@ -43,14 +42,8 @@ const Booking = () => {
       size: "42 sqm",
       capacity: "3 Adults",
       price: "₹4,800",
-      image:
-        "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
-      amenities: [
-        "King Bed",
-        "Balcony",
-        "Free Wi-Fi",
-        "Breakfast Included",
-      ],
+      image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
+      amenities: ["King Bed", "Balcony", "Free Wi-Fi", "Breakfast Included"],
     },
   ];
 
@@ -58,8 +51,8 @@ const Booking = () => {
     <Box
       sx={{
         width: "100%",
-         minHeight: "100vh",
-         px: { xs: 2, md: 12  }
+        minHeight: "100vh",
+        px: { xs: 2, md: 12 },
       }}
     >
       <Container maxWidth="lg">
@@ -67,7 +60,7 @@ const Booking = () => {
         <Typography variant="h4" fontWeight={700} ml={2} mt={2} align="center">
           Book Your Stay
         </Typography>
-          <Divider sx={{ mb: 4 }} />
+        <Divider sx={{ mb: 4 }} />
         <Typography variant="body1" mb={4} color="text.secondary">
           Select your dates and choose the perfect room
         </Typography>

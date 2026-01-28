@@ -93,6 +93,7 @@ export default function Navbar(props) {
             <Box component={NavLink} to="/" sx={{ display: "inline-flex" }}>
               <Box
                 component="img"
+                 loading="lazy"
                 src={LOGO}
                 alt="Gulmohar Grand"
                 sx={{

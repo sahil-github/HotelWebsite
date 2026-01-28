@@ -31,6 +31,7 @@ const Rooms = () => {
         <Box
           component="img"
           src={Room}
+           loading="lazy"
           alt="Room"
           sx={{
             width: "100%",

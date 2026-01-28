@@ -91,6 +91,7 @@ const Contact = () => {
             <Grid>
               <iframe
                 title="map"
+                
                 src="https://maps.google.com/maps?hl=en&q=gulmohar%20grand%20nagpur&z=14&output=embed"
                 width="100%"
                 height="250"

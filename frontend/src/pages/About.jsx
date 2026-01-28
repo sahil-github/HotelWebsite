@@ -57,6 +57,7 @@ const About = () => {
         <Grid size={{ xs: 12, md: 6 }}>
           <Box
             component="img"
+             loading="lazy"
             src={abt}
             alt="Gulmohar Grand"
            sx={{
