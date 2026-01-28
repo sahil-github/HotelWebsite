@@ -41,7 +41,7 @@ const Contact = () => {
         width: "100%",
          minHeight: "100vh",
         backgroundColor: "#fff",
-        px: { xs: 2, md: 12  }, py: 1 ,
+        px: { xs:2, md: 12  } ,
       }}>
       <Typography variant="h4" fontWeight={700} ml={2} mt={2} align="center">
         MESSAGE US!
@@ -49,7 +49,7 @@ const Contact = () => {
 
       <Divider sx={{ mb: 4 }} />
 
-      <Grid container spacing={4} sx={{ px: { xs: 2, md: 12  }, py: 1 }}>
+      <Grid container spacing={4} sx={{ px: { xs: 2, md: 12  } }}>
         {/* LEFT SIDE */}
         <Grid size={{ xs: 12, md: 6 }}>
           <Grid container direction="column" spacing={4}>

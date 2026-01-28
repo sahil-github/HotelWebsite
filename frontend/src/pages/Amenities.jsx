@@ -81,7 +81,6 @@ const Amenities = () => {
   return (
     <Box
       sx={{
-        py: 8,
 
         width: "100%",
         minHeight: "100vh",
@@ -89,7 +88,7 @@ const Amenities = () => {
         px: { xs: 2, md: 12 },
       }}
     >
-      <Typography variant="h4" fontWeight={700} mb={1} align="center">
+      <Typography variant="h4" fontWeight={700} ml={2} mt={2} align="center">
         AMENITIES
       </Typography>
 

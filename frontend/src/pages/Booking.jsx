@@ -59,14 +59,12 @@ const Booking = () => {
       sx={{
         width: "100%",
          minHeight: "100vh",
-        py: { xs: 6, md: 10 },
-        backgroundColor: "#fff",
          px: { xs: 2, md: 12  }
       }}
     >
       <Container maxWidth="lg">
         {/* HEADER */}
-        <Typography variant="h4" fontWeight={700} mb={1} align="center">
+        <Typography variant="h4" fontWeight={700} ml={2} mt={2} align="center">
           Book Your Stay
         </Typography>
           <Divider sx={{ mb: 4 }} />

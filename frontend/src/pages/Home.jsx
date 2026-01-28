@@ -26,7 +26,7 @@ const Home = () => {
           alignItems: "center",
           justifyContent: "center",
           textAlign: "center",
-          px: 2,
+          // px: 2,
         }}
       >
         <Box maxWidth="800px">
@@ -35,8 +35,8 @@ const Home = () => {
             sx={{
               color: "#fff",
               fontWeight: 700,
-              letterSpacing: 1.5,
-              mb: 2,
+              letterSpacing: 2,
+              mb: 4,
               fontSize: {
                 xs: "2.2rem",
                 sm: "3rem",
@@ -84,8 +84,7 @@ const Home = () => {
       </Box>
       <About />
        <Rooms/>
-      <Amenities/>
-      
+      <Amenities/>      
       <Contact />
 
     </>

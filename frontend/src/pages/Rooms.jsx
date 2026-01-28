@@ -6,13 +6,26 @@ import {
   ListItem,
   ListItemText,
   Box,
+  Divider
 } from "@mui/material";
 import Room from "../assets/about.png";
 
 const Rooms = () => {
   return (
-    <Box>
-        <Grid container spacing={4} sx={{ px: { xs: 2, md: 12 }, py: 4 }}>
+    <Box   sx={{
+        width: "100%",
+        minHeight: "100vh",
+        backgroundColor: "#fff",
+        px: { xs: 2, md: 12 },
+      }}>
+          <Typography variant="h4" fontWeight={700} ml={2} mt={2} align="center">
+        ROOMS & RATES
+          </Typography>
+    
+         
+               <Divider sx={{ mb: 4 }} />
+
+        <Grid container spacing={4} sx={{ px: { xs: 2, md: 12 } }}>
       {/* LEFT SIDE - IMAGE */}
       <Grid size={{ xs: 12, md: 6 }}>
         <Box
@@ -30,12 +43,12 @@ const Rooms = () => {
 
       {/* RIGHT SIDE - DETAILS */}
       <Grid size={{ xs: 12, md: 6 }}>
-        <Typography variant="h4" fontWeight={600} gutterBottom>
-          Double Room
+        <Typography variant="h4"  gutterBottom>
+          Single Room
         </Typography>
 
         <Typography variant="body1" sx={{ mb: 1 }}>
-          ⭕ Open for reservation until September 30, 2025
+          ⭕ Open for reservation until September 30, 202
         </Typography>
 
         <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
@@ -71,12 +84,6 @@ const Rooms = () => {
           </ListItem>
         </List>
 
-        <Typography variant="body2" sx={{ mt: 2 }}>
-          If you have any questions, or want to cancel or change your check-in
-          time, please contact us via our official Line:
-          <br />
-          <strong>https://lin.ee/seXemt9</strong>
-        </Typography>
       </Grid>
     </Grid>
     </Box>

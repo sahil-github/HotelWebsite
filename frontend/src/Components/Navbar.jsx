@@ -75,6 +75,7 @@ export default function Navbar(props) {
         sx={{
           backgroundColor: "#fff",
           boxShadow: "0 2px 10px rgba(0,0,0,0.08)",
+           px: { xs: 2, md: 12  }, py: 1 ,
         }}
       >
         <Toolbar>
@@ -95,10 +96,10 @@ export default function Navbar(props) {
                 src={LOGO}
                 alt="Gulmohar Grand"
                 sx={{
-                  height: { xs: 60, sm: 90 },
+                  height: { xs: 40, sm: 70 },
                   cursor: "pointer",
-                  transition: "transform 0.3s",
-                  "&:hover": { transform: "scale(1.05)" },
+                  // transition: "transform 0.3s",
+                  // "&:hover": { transform: "scale(1.05)" },
                 }}
               />
             </Box>
@@ -108,7 +109,7 @@ export default function Navbar(props) {
           <Box
             sx={{
               display: { xs: "none", sm: "flex" },
-              gap: 2,
+              gap: 3,
             }}
           >
             {navItems.map((item) => (
