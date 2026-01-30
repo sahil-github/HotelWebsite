@@ -9,22 +9,10 @@ const MainLayout = () => {
     <Box
       sx={{
         minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
       }}
     >
       <Navbar />
-      <Toolbar />
-      <Box
-        component="main"
-        sx={{
-          flex: 1,
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <Outlet />
-      </Box>
+      <Outlet />
 
       <Footer />
     </Box>

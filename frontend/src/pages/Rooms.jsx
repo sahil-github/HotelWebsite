@@ -17,6 +17,7 @@ const Rooms = () => {
         minHeight: "100vh",
         backgroundColor: "#fff",
         px: { xs: 2, md: 12 },
+        py: 4,
       }}>
           <Typography variant="h4" fontWeight={700} ml={2} mt={2} align="center">
         ROOMS & RATES

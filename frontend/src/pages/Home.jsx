@@ -7,6 +7,8 @@ import About from "./About";
 import Contact from "./Contact";
 import Amenities from "./Amenities";
 import Rooms from "./Rooms";
+import Btn from "../Components/Btn";
+
 
 const Home = () => {
   return (
@@ -26,7 +28,6 @@ const Home = () => {
           alignItems: "center",
           justifyContent: "center",
           textAlign: "center",
-          // px: 2,
         }}
       >
         <Box maxWidth="800px">
@@ -41,6 +42,7 @@ const Home = () => {
                 xs: "2.2rem",
                 sm: "3rem",
                 md: "3.5rem",
+                fontFamily: "Great Vibes ,cursive", 
               },
             }}
           >
@@ -62,7 +64,7 @@ const Home = () => {
             Crafted for Comfort, Designed for You
           </Typography>
 
-          <Button
+          {/* <Button
             component={RouterLink}
             to="/booking"
             variant="contained"
@@ -79,13 +81,17 @@ const Home = () => {
             }}
           >
             Book Your Stay
-          </Button>
+          </Button> */}
+          <Btn name="Book Your Stay" color="#f4c50b"   component={RouterLink} to="/booking" />
+          
         </Box>
       </Box>
+      <Rooms />
+      <Amenities />
       <About />
-       <Rooms/>
-      <Amenities/>      
       <Contact />
+      
+      
 
     </>
   );

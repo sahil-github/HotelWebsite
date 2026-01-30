@@ -18,8 +18,7 @@ const Footer = () => {
     <Box
       component="footer"
       sx={{
-        background:
-          "linear-gradient(180deg, #1E1E1E 0%, #121212 100%)",
+        background: "linear-gradient(180deg, #1E1E1E 0%, #121212 100%)",
         color: "#fff",
         pt: 5,
         pb: 3,
@@ -47,8 +46,9 @@ const Footer = () => {
                 fontSize: "0.9rem",
               }}
             >
-              A premium hotel in Nagpur offering elegant rooms, modern amenities,
-              and warm hospitality for both business and leisure travelers.
+              A premium hotel in Nagpur offering elegant rooms, modern
+              amenities, and warm hospitality for both business and leisure
+              travelers.
             </Typography>
           </Grid>
 
@@ -84,10 +84,7 @@ const Footer = () => {
 
           {/* CONTACT */}
           <Grid item xs={6} sm={4} md={3}>
-            <Typography
-              variant="subtitle1"
-              sx={{ mb: 1.5, fontWeight: 600 }}
-            >
+            <Typography variant="subtitle1" sx={{ mb: 1.5, fontWeight: 600 }}>
               Contact
             </Typography>
 
@@ -112,10 +109,7 @@ const Footer = () => {
 
           {/* SOCIAL */}
           <Grid item xs={12} sm={4} md={3}>
-            <Typography
-              variant="subtitle1"
-              sx={{ mb: 1.5, fontWeight: 600 }}
-            >
+            <Typography variant="subtitle1" sx={{ mb: 1.5, fontWeight: 600 }}>
               Follow Us
             </Typography>
 
@@ -138,7 +132,7 @@ const Footer = () => {
                   >
                     <Icon fontSize="small" />
                   </IconButton>
-                )
+                ),
               )}
             </Box>
           </Grid>

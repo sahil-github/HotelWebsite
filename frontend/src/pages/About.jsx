@@ -10,6 +10,7 @@ const About = () => {
         minHeight: "100vh",
         backgroundColor: "#fff",
         px: { xs: 2, md: 12 },
+        py: 4,
       }}
     >
       {/* Heading */}
@@ -20,7 +21,7 @@ const About = () => {
       <Divider sx={{ mb: 6 }} />
 
       {/* Content */}
-      <Grid container spacing={4} alignItems="center">
+      <Grid container spacing={4} alignItems="center" sx={{ px: { xs: 2, md: 12 } }}>
         {/* LEFT CONTENT */}
         <Grid size={{ xs: 12, md: 6 }}>
           <Stack spacing={3} maxWidth={800}>
@@ -60,7 +61,7 @@ const About = () => {
              loading="lazy"
             src={abt}
             alt="Gulmohar Grand"
-           sx={{
+            sx={{
             width: "100%",
             height: { xs: 500, md: 500 },
             objectFit: "cover",

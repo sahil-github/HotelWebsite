@@ -12,7 +12,7 @@ import {
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-
+import Btn from "../Components/Btn";
 import { Formik } from "formik";
 import * as Yup from "yup";
 
@@ -39,9 +39,10 @@ const Contact = () => {
   return (
     <Box sx={{
         width: "100%",
-         minHeight: "100vh",
+        minHeight: "100vh",
         backgroundColor: "#fff",
-        px: { xs:2, md: 12  } ,
+        px: { xs: 2, md: 12 },
+        py: 4,
       }}>
       <Typography variant="h4" fontWeight={700} ml={2} mt={2} align="center">
         MESSAGE US!
@@ -243,7 +244,7 @@ const Contact = () => {
                     size={{ xs: 12 }}
                     sx={{ display: "flex", justifyContent: "center" }}
                   >
-                    <Button
+                    {/* <Button
                       type="submit"
                       variant="contained"
                       size="large"
@@ -256,7 +257,10 @@ const Contact = () => {
                       }}
                     >
                       Send →
-                    </Button>
+                    </Button> */}
+
+                  <Btn/>
+
                   </Grid>
                 </Grid>
               </form>

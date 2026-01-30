@@ -75,7 +75,7 @@ export default function Navbar(props) {
         sx={{
           backgroundColor: "#fff",
           boxShadow: "0 2px 10px rgba(0,0,0,0.08)",
-           px: { xs: 2, md: 12  }, py: 1 ,
+           px: { xs: 2, md: 12  } 
         }}
       >
         <Toolbar>
@@ -89,7 +89,7 @@ export default function Navbar(props) {
           </IconButton>
 
           {/* LOGO */}
-          <Box sx={{ flexGrow: 1 }}>
+          <Box sx={{ flexGrow: 1 ,alignItems: "center", display: "flex" }}>
             <Box component={NavLink} to="/" sx={{ display: "inline-flex" }}>
               <Box
                 component="img"
@@ -97,10 +97,8 @@ export default function Navbar(props) {
                 src={LOGO}
                 alt="Gulmohar Grand"
                 sx={{
-                  height: { xs: 40, sm: 70 },
+                  height: 90,
                   cursor: "pointer",
-                  // transition: "transform 0.3s",
-                  // "&:hover": { transform: "scale(1.05)" },
                 }}
               />
             </Box>

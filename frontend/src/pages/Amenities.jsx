@@ -148,7 +148,7 @@ const Amenities = () => {
 
       <Divider sx={{ mb: 5 }} />
 
-      <Grid container spacing={5}>
+      <Grid container spacing={5} sx={{ px: { xs: 2, md: 12 } }}>
         {amenities.map((item, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Box
