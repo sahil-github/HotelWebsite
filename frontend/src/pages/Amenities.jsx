@@ -1,7 +1,7 @@
 import React from "react";
-import { Box, Grid, Typography, Divider } from "@mui/material";
+import AmenityCard from "./AmenityCard";
 
-// Icons
+// MUI Icons
 import BedOutlinedIcon from "@mui/icons-material/BedOutlined";
 import RestaurantOutlinedIcon from "@mui/icons-material/RestaurantOutlined";
 import EventOutlinedIcon from "@mui/icons-material/EventOutlined";
@@ -10,190 +10,119 @@ import AirportShuttleOutlinedIcon from "@mui/icons-material/AirportShuttleOutlin
 import TvOutlinedIcon from "@mui/icons-material/TvOutlined";
 import FitnessCenterOutlinedIcon from "@mui/icons-material/FitnessCenterOutlined";
 import AcUnitOutlinedIcon from "@mui/icons-material/AcUnitOutlined";
-import LocalLaundryServiceOutlinedIcon from "@mui/icons-material/LocalLaundryServiceOutlined";
-import BathtubOutlinedIcon from "@mui/icons-material/BathtubOutlined";
-import LuggageOutlinedIcon from "@mui/icons-material/LuggageOutlined";
-import RoomServiceOutlinedIcon from "@mui/icons-material/RoomServiceOutlined";
 import WifiOutlinedIcon from "@mui/icons-material/WifiOutlined";
 import LocalParkingOutlinedIcon from "@mui/icons-material/LocalParkingOutlined";
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
-import SpaOutlinedIcon from "@mui/icons-material/SpaOutlined";
-import CoffeeOutlinedIcon from "@mui/icons-material/CoffeeOutlined";
-import MeetingRoomOutlinedIcon from "@mui/icons-material/MeetingRoomOutlined";
-import SmokeFreeOutlinedIcon from "@mui/icons-material/SmokeFreeOutlined";
-import SupportAgentOutlinedIcon from "@mui/icons-material/SupportAgentOutlined";
+import RoomServiceOutlinedIcon from "@mui/icons-material/RoomServiceOutlined";
 
 const amenities = [
   {
-    icon: <BedOutlinedIcon />,
+    icon: <BedOutlinedIcon style={{ fontSize: "42px" }} />,
     title: "Comfortable Beds",
     desc: "Premium bedding for a restful night’s sleep.",
   },
   {
-    icon: <RestaurantOutlinedIcon />,
+    icon: <RestaurantOutlinedIcon style={{ fontSize: "42px" }} />,
     title: "In-House Restaurant",
-    desc: "Delicious meals prepared by expert chefs.",
+    desc: "Delicious meals by expert chefs.",
   },
   {
-    icon: <EventOutlinedIcon />,
+    icon: <EventOutlinedIcon style={{ fontSize: "42px" }} />,
     title: "Event Space",
-    desc: "Perfect venue for small celebrations & gatherings.",
+    desc: "Perfect venue for gatherings.",
   },
   {
-    icon: <PoolOutlinedIcon />,
+    icon: <PoolOutlinedIcon style={{ fontSize: "42px" }} />,
     title: "Swimming Pool",
-    desc: "Clean and relaxing pool for guests.",
+    desc: "Clean & relaxing pool.",
   },
   {
-    icon: <AirportShuttleOutlinedIcon />,
+    icon: <AirportShuttleOutlinedIcon style={{ fontSize: "42px" }} />,
     title: "Airport Shuttle",
-    desc: "Comfortable pickup and drop service available.",
+    desc: "Pickup & drop service.",
   },
   {
-    icon: <TvOutlinedIcon />,
+    icon: <TvOutlinedIcon style={{ fontSize: "42px" }} />,
     title: "Flat-Screen TV",
-    desc: "Entertainment with multiple channels.",
+    desc: "Entertainment channels.",
   },
   {
-    icon: <FitnessCenterOutlinedIcon />,
+    icon: <FitnessCenterOutlinedIcon style={{ fontSize: "42px" }} />,
     title: "Fitness Center",
-    desc: "Basic gym facilities to stay active.",
+    desc: "Basic gym facilities.",
   },
   {
-    icon: <AcUnitOutlinedIcon />,
+    icon: <AcUnitOutlinedIcon style={{ fontSize: "42px" }} />,
     title: "Air Conditioning",
-    desc: "Fully air-conditioned rooms for comfort.",
+    desc: "Fully AC rooms.",
   },
   {
-    icon: <LocalLaundryServiceOutlinedIcon />,
-    title: "Laundry Service",
-    desc: "Quick and reliable laundry support.",
-  },
-  {
-    icon: <BathtubOutlinedIcon />,
-    title: "Private Bathroom",
-    desc: "Modern fittings with 24/7 hot water.",
-  },
-  {
-    icon: <LuggageOutlinedIcon />,
-    title: "Luggage Storage",
-    desc: "Safe storage for your belongings.",
-  },
-  {
-    icon: <RoomServiceOutlinedIcon />,
-    title: "Room Service",
-    desc: "Food and assistance delivered to your room.",
-  },
-  {
-    icon: <WifiOutlinedIcon />,
+    icon: <WifiOutlinedIcon style={{ fontSize: "42px" }} />,
     title: "Free Wi-Fi",
-    desc: "High-speed internet throughout the hotel.",
+    desc: "High speed internet.",
   },
   {
-    icon: <LocalParkingOutlinedIcon />,
+    icon: <LocalParkingOutlinedIcon style={{ fontSize: "42px" }} />,
     title: "Free Parking",
-    desc: "Secure on-site parking for guests.",
+    desc: "Secure parking area.",
   },
   {
-    icon: <SecurityOutlinedIcon />,
+    icon: <SecurityOutlinedIcon style={{ fontSize: "42px" }} />,
     title: "24/7 Security",
-    desc: "CCTV surveillance and trained staff.",
+    desc: "CCTV & staff support.",
   },
   {
-    icon: <SpaOutlinedIcon />,
-    title: "Spa & Wellness",
-    desc: "Relax with soothing spa treatments.",
-  },
-  {
-    icon: <CoffeeOutlinedIcon />,
-    title: "Tea & Coffee",
-    desc: "Complimentary tea and coffee service.",
-  },
-  {
-    icon: <MeetingRoomOutlinedIcon />,
-    title: "Conference Room",
-    desc: "Ideal for meetings and business events.",
-  },
-  {
-    icon: <SmokeFreeOutlinedIcon />,
-    title: "Non-Smoking Rooms",
-    desc: "Clean and smoke-free environment.",
-  },
-  {
-    icon: <SupportAgentOutlinedIcon />,
-    title: "24/7 Front Desk",
-    desc: "Assistance available anytime.",
+    icon: <RoomServiceOutlinedIcon style={{ fontSize: "42px" }} />,
+    title: "Room Service",
+    desc: "Food & assistance anytime.",
   },
 ];
 
 const Amenities = () => {
   return (
-    <Box
-      sx={{
-        width: "100%",
-        minHeight: "100vh",
-        backgroundColor: "#fff",
-        px: { xs: 2, md: 12 },
-        py: 4,
+    <section
+      style={{
+        padding: "60px 80px",
+        textAlign: "center",
+        background: "#fff",
+        color: "#111",
       }}
     >
-      <Typography
-        variant="h4"
-        fontWeight={700}
-        textAlign="center"
-        mb={1}
+      <div
+        style={{
+          maxWidth: "1200px",
+          margin: "auto",
+        }}
       >
-        AMENITIES
-      </Typography>
+        <h2
+          style={{
+            fontSize: "34px",
+            fontWeight: "700",
+            marginBottom: "35px",
+          }}
+        >
+          Amenities
+        </h2>
 
-      <Divider sx={{ mb: 5 }} />
-
-      <Grid container spacing={5} sx={{ px: { xs: 2, md: 12 } }}>
-        {amenities.map((item, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
-            <Box
-              sx={{
-                textAlign: "center",
-                px: 3,
-                py: 4,
-                borderRadius: 2,
-                transition: "0.3s",
-                "&:hover": {
-                  boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
-                  transform: "translateY(-5px)",
-                  loading: "lazy"
-                },
-              }}
-            >
-              <Box
-                sx={{
-                  fontSize: 50,
-                  color: "#1976d2",
-                  mb: 1,
-                }}
-              >
-                {item.icon}
-              </Box>
-
-              <Typography
-                variant="subtitle1"
-                fontWeight={600}
-                mb={0.5}
-              >
-                {item.title}
-              </Typography>
-
-              <Typography
-                variant="body2"
-                sx={{ color: "#666", fontSize: "0.85rem" }}
-              >
-                {item.desc}
-              </Typography>
-            </Box>
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
+        <div
+          style={{
+            display: "grid",
+            justifyContent: "center",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: "30px",
+          }}
+        >
+          {amenities.map((item, index) => (
+            <AmenityCard
+              key={index}
+              icon={item.icon}
+              title={item.title}
+              desc={item.desc}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 
