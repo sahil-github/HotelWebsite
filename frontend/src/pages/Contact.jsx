@@ -3,7 +3,6 @@ import {
   Grid,
   Typography,
   TextField,
-  Button,
   Divider,
   Snackbar,
   Alert,
@@ -37,25 +36,27 @@ const Contact = () => {
   }, []);
 
   return (
-    <Box sx={{
+    <Box
+      sx={{
         width: "100%",
         minHeight: "100vh",
         backgroundColor: "#fff",
         px: { xs: 2, md: 12 },
         py: 4,
-      }}>
+      }}
+    >
       <Typography variant="h4" fontWeight={700} ml={2} mt={2} align="center">
         MESSAGE US!
       </Typography>
 
       <Divider sx={{ mb: 4 }} />
 
-      <Grid container spacing={4} sx={{ px: { xs: 2, md: 12  } }}>
+      <Grid container spacing={4} sx={{ px: { xs: 2, md: 12 } }}>
         {/* LEFT SIDE */}
         <Grid size={{ xs: 12, md: 6 }}>
           <Grid container direction="column" spacing={4}>
             <Grid>
-              <Box display="flex" gap={2} >
+              <Box display="flex" gap={2}>
                 <LocationOnIcon color="error" />
                 <Box>
                   <Typography fontWeight={600}>ADDRESS</Typography>
@@ -64,9 +65,7 @@ const Contact = () => {
                   </Typography>
                 </Box>
               </Box>
-            </Grid>
 
-            <Grid>
               <Box display="flex" gap={2}>
                 <PhoneIcon color="error" />
                 <Box>
@@ -77,9 +76,7 @@ const Contact = () => {
                   </Typography>
                 </Box>
               </Box>
-            </Grid>
 
-            <Grid>
               <Box display="flex" gap={2}>
                 <AccessTimeIcon color="error" />
                 <Box>
@@ -92,7 +89,6 @@ const Contact = () => {
             <Grid>
               <iframe
                 title="map"
-                
                 src="https://maps.google.com/maps?hl=en&q=gulmohar%20grand%20nagpur&z=14&output=embed"
                 width="100%"
                 height="250"
@@ -244,23 +240,7 @@ const Contact = () => {
                     size={{ xs: 12 }}
                     sx={{ display: "flex", justifyContent: "center" }}
                   >
-                    {/* <Button
-                      type="submit"
-                      variant="contained"
-                      size="large"
-                      sx={{
-                        mt: 2,
-                        px: 4,
-                        borderRadius: 2,
-                        bgcolor: "#d32f2f",
-                        "&:hover": { bgcolor: "#b71c1c" },
-                      }}
-                    >
-                      Send →
-                    </Button> */}
-
-                  <Btn/>
-
+                    <Btn name="Send" />
                   </Grid>
                 </Grid>
               </form>

@@ -64,25 +64,8 @@ const Home = () => {
             Crafted for Comfort, Designed for You
           </Typography>
 
-          {/* <Button
-            component={RouterLink}
-            to="/booking"
-            variant="contained"
-            sx={{
-              backgroundColor: "#f4c50b",
-              color: "#000",
-              px: 4,
-              py: 1.5,
-              fontWeight: 600,
-              borderRadius: "30px",
-              "&:hover": {
-                backgroundColor: "#e0b400",
-              },
-            }}
-          >
-            Book Your Stay
-          </Button> */}
-          <Btn name="Book Your Stay" color="#f4c50b"   component={RouterLink} to="/booking" />
+         
+          <Btn name="Book Your Stay" color="#000" bgcolor="#f4c50b"   onhover="#e0b400" component={RouterLink} to="/booking" />
           
         </Box>
       </Box>
